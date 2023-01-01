@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "iexpo",
+    "name": "iExpo",
     "slug": "iexpo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,16 +18,46 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wengqianshan.iexpo",
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/foreground.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.wengqianshan.iexpo",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "scheme": "iexpo",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends.",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "178e07b4-1d94-4044-b829-2e6569895e77"
+      }
     }
   }
 }
